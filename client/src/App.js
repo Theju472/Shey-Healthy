@@ -1,11 +1,24 @@
 //import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import {BrowserRouter , Router , Route, Routes} from 'react-router-dom'
+import Login from './Pages/Login'
+import Regester from './Pages/Regester'
+import {Button} from 'antd'
+//import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>SHEY HEALTHY</h1>
-    </div>
+    
+    <BrowserRouter>
+    
+      <Routes>
+
+        <Route path='/login' element={<Login/>}/>
+         <Route path='/regester' element={<Regester/>}/>
+
+        
+      </Routes>
+    </BrowserRouter>
   );
 }
 
